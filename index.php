@@ -18,7 +18,8 @@
             <input class="form-control" type="text" name="usuario">
             <label>Clave</label>
             <input class="form-control" type="text" name="clave">
-            <input class="form-control btn btn-success" type="submit" name="btnI" value="Ingresar">
+            <!-- <input class="form-control btn btn-success" type="submit" name="btnI" value="Ingresar"> -->
+            <a href="pages/dashboard.php" class="form-control btn btn-success" name="btnI">Ingresar</a>
           </form>
         </div>
         </div>

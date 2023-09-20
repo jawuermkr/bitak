@@ -2,8 +2,18 @@
 
 <div class="container">
   <div class="row my-5">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
+    <div class="col-md-3">
+      <div class="card p-3 text-center">
+        <h2 class="mytext">Conteo de registros</h2>
+        <hr>
+        <h3 class="numt">10</h3>
+        <hr>
+        <h2 class="mytext">Análisis</h2>
+        <hr>
+        <img src="https://cdn-icons-png.flaticon.com/512/3349/3349622.png" width="100%">
+      </div>
+    </div>
+    <div class="col-md-9">
       <h2 class="mytext my-3">Bitácora del capitán</h2>
       <form action="../query/query.php" method="post">
         <div class="row">
