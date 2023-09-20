@@ -41,12 +41,19 @@
         <b><small><label>Proyecto</label></small></b>
         <select class="form-control" type="text" name="proyecto">
           <option value=" --- " disabled selected>--> Seleccionar <--</option>
+          <option value="Asiste Ingeniería">Asiste Ingeniería</option>
+          <option value="Asiste ING">Asiste ING</option>
           <option value="Intranet CLARO">Intranet CLARO</option>
           <option value="Intranet WOM">Intranet WOM</option>
           <option value="Intranet MAJORITY">Intranet MAJORITY</option>
           <option value="Intraner OBAMACARE">Intraner OBAMACARE</option>
           <option value="AsisLock CLARO">AsisLock CLARO</option>
           <option value="AsisLock WOM">AsisLock WOM</option>
+          <option value="AsisLock Usuarios CLARO">AsisLock Usuarios CLARO</option>
+          <option value="AsisLock Usuarios WOM">AsisLock Usuarios WOM</option>
+          <option value="WLTV">WLTV</option>
+          <option value="Prime">Prime</option>
+          <option value="Genius">Genius</option>
           <option value="Pajarito">Pajarito</option>
           <option value="Generales">Generales</option>
         </select>
