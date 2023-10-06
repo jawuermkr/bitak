@@ -1,16 +1,57 @@
-<?php include "header.php"; ?>
+<?php 
+include "header.php";
+
+if (isset($_POST['btnI'])) {
+
+    $identi = $_POST['usuario'];
+    $clavelog = $_POST['clave'];
+
+    if ($identi == "" || $clavelog == "") {
+        $_SESSION['correcto'] = 2; //2 sera error de campos vacios
+        echo "<script>
+          Swal.fire({
+            icon: 'error',
+            title: '¡Ambos campos por favor!',
+            timer: '2000'
+          }).then(function() {
+            window.location = '../index.php';
+          });
+            </script>";
+    } else {
+        include("../conexion.php");
+        $_SESSION['correcto'] = 3; //2 seran datos incorrectos
+
+        $resultados = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$identi' AND clave = '$clavelog'");
+        while ($consulta = mysqli_fetch_array($resultados)) {
+
+            $_SESSION['correcto'] = 1;
+            $_SESSION['nombre'] = $consulta['nombre'];
+            $_SESSION['usuario'] = $consulta['usuario'];
+            $_SESSION['id'] = $consulta['id'];
+            $_SESSION['rol'] = $consulta['rol'];
+        }
+
+        header('Location:dashboard.php');
+
+        include("../desconexion.php");
+    }
+}
+
+?>
+
 
 <div class="container">
   <div class="row my-5">
     <div class="col-md-3">
       <div class="card p-3 text-center">
-        <h2 class="mytext">Conteo de registros</h2>
+        <h2 class="mytext">Registros diarios</h2>
         <hr>
-        <h3 class="numt">10</h3>
+        <h3 class="numt"><?php echo $_SESSION['total_d']; ?></h3>
         <hr>
-        <h2 class="mytext">Análisis</h2>
+        <h2 class="mytext">Registros mensuales</h2>
         <hr>
-        <img src="https://cdn-icons-png.flaticon.com/512/3349/3349622.png" width="100%">
+        <h3 class="numt"><?php echo $_SESSION['total_m']; ?></h3>
+        <hr>
       </div>
     </div>
     <div class="col-md-9">
@@ -34,6 +75,12 @@
           <option value="T&T">T&T</option>
           <option value="MOVIL">MOVIL</option>
           <option value="HOGAR">HOGAR</option>
+          <option value="CLARO">CLARO</option>
+          <option value="WOM">WOM</option>
+          <option value="Majority">Majority</option>
+          <option value="ObamaCARE">ObamaCARE</option>
+          <option value="Asiste Ingeniería">Asiste Ingeniería</option>
+          <option value="Asiste ING">Asiste ING</option>
           <option value="Generales">Generales</option>
         </select>
         </div> 
@@ -51,9 +98,6 @@
           <option value="AsisLock WOM">AsisLock WOM</option>
           <option value="AsisLock Usuarios CLARO">AsisLock Usuarios CLARO</option>
           <option value="AsisLock Usuarios WOM">AsisLock Usuarios WOM</option>
-          <option value="WLTV">WLTV</option>
-          <option value="Prime">Prime</option>
-          <option value="Genius">Genius</option>
           <option value="Pajarito">Pajarito</option>
           <option value="Generales">Generales</option>
         </select>
@@ -61,7 +105,8 @@
         <div class="col-sm-6">
         <b><small><label>Responsable</label></small></b>
         <select class="form-control" type="text" name="responsable">
-          <option value=" --- " disabled selected>--> Seleccionar <--</option>
+          <option value="<?php echo $_SESSION['nombre'];?>" selected><?php echo $_SESSION['nombre'];?> </option>
+          <option value=" --- " disabled>--> Otro <--</option>
           <option value="Alejandra Robles">Alejandra Robles</option>
           <option value="Damaris Hernandez">Damaris Hernandez</option>
           <option value="Oscar Gutierrez">Oscar Gutierrez</option>

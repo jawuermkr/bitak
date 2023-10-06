@@ -18,15 +18,14 @@
             <input class="form-control" type="text" name="usuario">
             <label>Clave</label>
             <input class="form-control" type="text" name="clave">
-            <!-- <input class="form-control btn btn-success" type="submit" name="btnI" value="Ingresar"> -->
-            <a href="pages/dashboard.php" class="form-control btn btn-success" name="btnI">Ingresar</a>
+            <input class="form-control btn btn-success" type="submit" name="btnI" value="Ingresar">
           </form>
         </div>
         </div>
         <div class="col-md-4"></div>
       </div>
     </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
