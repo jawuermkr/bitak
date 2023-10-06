@@ -63,6 +63,8 @@ if ($identi == "" || $clavelog == "") {
         $_SESSION['usuario'] = $consulta['usuario'];
         $_SESSION['id'] = $consulta['id'];
         $_SESSION['rol'] = $consulta['rol'];
+
+        include_once('query/query.php');
         
       }
       
