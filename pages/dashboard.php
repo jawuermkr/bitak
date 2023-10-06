@@ -1,42 +1,5 @@
 <?php 
 include "header.php";
-
-if (isset($_POST['btnI'])) {
-
-    $identi = $_POST['usuario'];
-    $clavelog = $_POST['clave'];
-
-    if ($identi == "" || $clavelog == "") {
-        $_SESSION['correcto'] = 2; //2 sera error de campos vacios
-        echo "<script>
-          Swal.fire({
-            icon: 'error',
-            title: '¡Ambos campos por favor!',
-            timer: '2000'
-          }).then(function() {
-            window.location = '../index.php';
-          });
-            </script>";
-    } else {
-        include("../conexion.php");
-        $_SESSION['correcto'] = 3; //2 seran datos incorrectos
-
-        $resultados = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario = '$identi' AND clave = '$clavelog'");
-        while ($consulta = mysqli_fetch_array($resultados)) {
-
-            $_SESSION['correcto'] = 1;
-            $_SESSION['nombre'] = $consulta['nombre'];
-            $_SESSION['usuario'] = $consulta['usuario'];
-            $_SESSION['id'] = $consulta['id'];
-            $_SESSION['rol'] = $consulta['rol'];
-        }
-
-        header('Location:dashboard.php');
-
-        include("../desconexion.php");
-    }
-}
-
 ?>
 
 
