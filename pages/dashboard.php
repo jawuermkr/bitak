@@ -39,11 +39,11 @@ include "header.php";
           <option value="MOVIL">MOVIL</option>
           <option value="HOGAR">HOGAR</option>
           <option value="CLARO">CLARO</option>
-          <option value="WOM">WOM</option>
           <option value="Majority">Majority</option>
           <option value="ObamaCARE">ObamaCARE</option>
           <option value="Asiste Ingeniería">Asiste Ingeniería</option>
           <option value="Asiste ING">Asiste ING</option>
+          <option value="Hidra">Hidra</option>
           <option value="Generales">Generales</option>
         </select>
         </div> 
@@ -54,14 +54,12 @@ include "header.php";
           <option value="Asiste Ingeniería">Asiste Ingeniería</option>
           <option value="Asiste ING">Asiste ING</option>
           <option value="Intranet CLARO">Intranet CLARO</option>
-          <option value="Intranet WOM">Intranet WOM</option>
           <option value="Intranet MAJORITY">Intranet MAJORITY</option>
           <option value="Intraner OBAMACARE">Intraner OBAMACARE</option>
           <option value="AsisLock CLARO">AsisLock CLARO</option>
-          <option value="AsisLock WOM">AsisLock WOM</option>
           <option value="AsisLock Usuarios CLARO">AsisLock Usuarios CLARO</option>
-          <option value="AsisLock Usuarios WOM">AsisLock Usuarios WOM</option>
           <option value="Pajarito">Pajarito</option>
+          <option value="Hidra">Hidra</option>
           <option value="Generales">Generales</option>
         </select>
         </div> 
@@ -72,7 +70,7 @@ include "header.php";
           <option value=" --- " disabled>--> Otro <--</option>
           <option value="Alejandra Robles">Alejandra Robles</option>
           <option value="Damaris Hernandez">Damaris Hernandez</option>
-          <option value="Oscar Gutierrez">Oscar Gutierrez</option>
+          <option value="Manuel Quevedo">Manuel Quevedo</option>
           <option value="Jawuer Morales">Jawuer Morales</option>
         </select>
         </div> 
